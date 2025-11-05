@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐</title>
+    <style>
+        body { background: #ffecd2; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .cake { width: 200px; height: 150px; background: #fff; border-radius: 10px; position: relative; margin-bottom: 30px; }
+        .cake::before { content: ''; width: 180px; height: 30px; background: #ff8a80; position: absolute; top: 20px; left: 10px; border-radius: 5px; }
+        .candle { width: 10px; height: 40px; background: #ffd54f; position: absolute; top: -40px; left: 95px; border-radius: 2px; }
+        .flame { width: 15px; height: 25px; background: #ff9800; position: absolute; top: -25px; left: 92.5px; border-radius: 50% 50% 20% 20%; animation: burn 1s infinite alternate; }
+        @keyframes burn { 0% { transform: scale(1); } 100% { transform: scale(1.1); } }
+        h1 { color: #e64a19; font-size: 28px; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    </style>
+</head>
+<body>
+    <div class="cake">
+        <div class="candle"></div>
+        <div class="flame"></div>
+    </div>
+    <h1>生日快乐！愿你天天开心～</h1>
+    <!-- 背景音乐（可替换为自己的音频链接） -->
+    <audio controls>
+        <source src="https://example.com/happy-birthday.mp3" type="audio/mpeg">
+        你的浏览器不支持音频播放
+    </audio>
+</body>
+</html>
